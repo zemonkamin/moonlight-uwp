@@ -1,0 +1,11 @@
+<Page x:Class="Moonlight.SettingsPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="Black">
+  <ScrollViewer><StackPanel Padding="24" MaxWidth="600" HorizontalAlignment="Stretch">
+    <TextBlock Text="Stream settings" FontSize="28" Foreground="{StaticResource Accent}"/>
+    <ComboBox x:Name="Resolution" Header="H.264 resolution" HorizontalAlignment="Stretch"><ComboBoxItem Content="854 × 480"/><ComboBoxItem Content="1280 × 720"/><ComboBoxItem Content="1920 × 1080"/></ComboBox>
+    <TextBlock Text="Frame rate: 30 FPS" Margin="0,12,0,8"/>
+    <Slider x:Name="Bitrate" Header="Bitrate, Mbps" Minimum="2" Maximum="40" StepFrequency="1" ValueChanged="BitrateChanged"/><TextBlock x:Name="BitrateLabel"/>
+    <ToggleSwitch x:Name="Remote" Header="Internet connection" OffContent="Local network" OnContent="Smaller network packets"/>
+    <TextBlock Text="Default bitrate: 40 Mbps. Use a connected keyboard, mouse, or the touchscreen as a mouse. Available resolutions and latency depend on the hardware decoder in your phone. Audio: Opus to PCM, 48 kHz stereo." TextWrapping="Wrap" Foreground="#ADBBC9"/>
+    <Button Content="Save" Click="Save"/>
+  </StackPanel></ScrollViewer>
+</Page>

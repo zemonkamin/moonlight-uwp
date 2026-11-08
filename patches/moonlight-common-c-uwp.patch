@@ -1,0 +1,20 @@
+diff --git a/src/Platform.c b/src/Platform.c
+index 458fd98..55627c3 100644
+--- a/src/Platform.c
++++ b/src/Platform.c
+@@ -35,6 +35,7 @@ typedef struct tagTHREADNAME_INFO
+ typedef HRESULT (WINAPI *SetThreadDescription_t)(HANDLE, PCWSTR);
+ 
+ void setThreadNameWin32(const char* name) {
++#ifdef LC_WINDOWS_DESKTOP
+     SetThreadDescription_t setThreadDescriptionFunc;
+ 
+     // This function is only supported on Windows 10 RS1 and later
+@@ -47,6 +48,7 @@ void setThreadNameWin32(const char* name) {
+         setThreadDescriptionFunc(GetCurrentThread(), nameW);
+     }
+ 
++#endif // LC_WINDOWS_DESKTOP: dynamic kernel32 loading is not an AppContainer API
+ #ifdef _MSC_VER
+     // This method works on legacy OSes and older tools not updated to use SetThreadDescription yet,
+     // but it's only safe on MSVC with SEH

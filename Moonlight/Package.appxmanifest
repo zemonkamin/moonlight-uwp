@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
+  <Identity Name="Moonlight.Mobile" Publisher="CN=MoonlightMobile" Version="1.0.0.0" />
+  <mp:PhoneIdentity PhoneProductId="c26cd328-98f4-4a2b-a346-e3e6ebc6ea28" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>Moonlight Mobile</DisplayName>
+    <PublisherDisplayName>Moonlight Mobile contributors</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.14393.0" MaxVersionTested="10.0.15063.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+  <Applications>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Moonlight.App">
+      <uap:VisualElements DisplayName="Moonlight" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\Icon44.png" Description="GameStream and Sunshine client for Windows 10 Mobile" BackgroundColor="transparent">
+        <uap:DefaultTile ShortName="Moonlight" Square310x310Logo="Assets\LargeTile.png" Wide310x150Logo="Assets\WideTile.png" Square71x71Logo="Assets\SmallTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo" />
+            <uap:ShowOn Tile="wide310x150Logo" />
+            <uap:ShowOn Tile="square310x310Logo" />
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
+  </Capabilities>
+</Package>

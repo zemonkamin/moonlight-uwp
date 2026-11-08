@@ -1,0 +1,16 @@
+{
+  "upstream": {
+    "url": "https://github.com/moonlight-stream/moonlight-windows.git",
+    "commit": "6ae9180cce0bc8d72dba48918dc387a5ab4df25f"
+  },
+  "submodules": [
+    { "path": "moonlight-common-c/nanors", "url": "https://github.com/sleepybishop/nanors.git", "commit": "a9b1636f9c98dbfdd0daeaf6982ccd24d1c30f29", "patch": "patches/nanors-vs2017.patch" },
+    { "path": "moonlight-common-c", "url": "https://github.com/moonlight-stream/moonlight-common-c.git", "commit": "e80a786afedeaccff63e839e68c8f3d8a057c13d", "patch": "patches/moonlight-common-c-uwp.patch" },
+    { "path": "third_party/opus", "url": "https://github.com/xiph/opus.git", "commit": "ddbe48383984d56acd9e1ab6a090c54ca6b735a6", "version": "1.5.2" },
+    { "path": "third_party/mbedtls", "url": "https://github.com/Mbed-TLS/mbedtls.git", "commit": "e185d7fd85499c8ce5ca2a54f5cf8fe7dbe3f8df", "version": "3.6.5" }
+  ],
+  "nuget": { "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2" },
+  "sdk": "10.0.15063.0",
+  "minOS": "10.0.14393.0",
+  "toolset": "v141"
+}

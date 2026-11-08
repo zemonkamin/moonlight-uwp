@@ -1,0 +1,74 @@
+# Visual Studio settings and caches
+.vs/
+*.suo
+*.user
+*.sln.docstates
+*.VC.db
+*.VC.opendb
+ipch/
+
+# Build and restore outputs
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+AppPackages/
+[Pp]ackages/
+/build/
+/artifacts/
+native/Generated Files/
+TestResults/
+*/project.lock.json
+*.cache
+*.cachefile
+*.log
+*.binlog
+*.dmp
+*.tmp
+*.tmp_proj
+*.obj
+*.pch
+*.pdb
+*.ilk
+*.idb
+*.ipdb
+*.iobj
+*.tlog
+*.lastbuildstate
+*.winmd
+*.dll
+*.exe
+*.lib
+*.exp
+
+# App packages and symbols belong in releases, not the source tree
+*.appx
+*.appxbundle
+*.appxupload
+*.appxsym
+*.msix
+*.msixbundle
+
+# Local signing material and application data
+*.pfx
+*.p12
+*.cer
+*.pem
+*.key
+*.snk
+identity.dat
+hosts.json
+settings.json
+.env
+.env.*
+!.env.example
+
+# Editor and operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.bak
+UpgradeLog*.htm
+UpgradeLog*.XML
+_UpgradeReport_Files/

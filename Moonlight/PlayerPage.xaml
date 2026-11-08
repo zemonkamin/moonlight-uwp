@@ -1,0 +1,10 @@
+<Page x:Class="Moonlight.PlayerPage" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="LoadedPlayer" Background="Black">
+  <Grid>
+    <MediaElement x:Name="Video" AutoPlay="True" AreTransportControlsEnabled="False" RealTimePlayback="True" Stretch="Uniform" MediaFailed="PlaybackFailed"/>
+    <Grid x:Name="InputSurface" Background="Transparent" PointerPressed="PointerDown" PointerMoved="PointerMove" PointerReleased="PointerUp" PointerCanceled="PointerCancel" PointerCaptureLost="PointerCancel" PointerWheelChanged="PointerWheel"/>
+    <Grid x:Name="ConnectionBar" VerticalAlignment="Top" Background="#AA101A24" Padding="12,4"><Grid.ColumnDefinitions><ColumnDefinition Width="*"/><ColumnDefinition Width="Auto"/></Grid.ColumnDefinitions>
+      <TextBlock x:Name="Status" Text="Connecting…" FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center"/>
+      <Button Grid.Column="1" Content="Cancel" Click="Disconnect"/>
+    </Grid>
+  </Grid>
+</Page>

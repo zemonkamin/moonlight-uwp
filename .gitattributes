@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.sln text eol=crlf
+# Unified diff context lines must retain their original whitespace.
+*.patch text eol=lf -whitespace
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ico binary

@@ -1,0 +1,13 @@
+diff --git a/deps/obl/oblas_common.h b/deps/obl/oblas_common.h
+index 8069c51..8cbf28a 100644
+--- a/deps/obl/oblas_common.h
++++ b/deps/obl/oblas_common.h
+@@ -4,7 +4,7 @@
+ #include <stddef.h>
+ #include <stdint.h>
+ 
+-#if defined(__x86_64__) || defined(_M_X64) || defined(__i386__) || defined(_M_IX86)
++#if (defined(__x86_64__) || defined(_M_X64) || defined(__i386__) || defined(_M_IX86)) && !(defined(_MSC_VER) && _MSC_VER < 1920)
+ #define OBLAS_ARCH_X86 1
+ #elif defined(__aarch64__) || defined(_M_ARM64) || defined(__arm__) || defined(_M_ARM)
+ #define OBLAS_ARCH_ARM 1
